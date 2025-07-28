@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f2f2f2;
+    }
+
+    .left, .center, .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .center img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    video, audio {
+      max-width: 100%;
+      outline: none;
+    }
+
+    .left, .right {
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <audio controls>
+      <source src="PH.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="center">
+    <img src="WAR2.jpg" alt="Center Image">
+  </div>
+
+  <div class="right">
+    <video controls width="300">
+      <source src="KALKI.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+</html>
