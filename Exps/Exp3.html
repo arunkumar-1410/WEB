@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exp3 Responsive Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: #444;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            padding: 1em;
+            text-align: center;
+        }
+
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+        }
+
+        /* Responsive styles for mobile/small screens */
+        @media (max-width: 600px) {
+            body {
+                background: #e3f2fd;
+            }
+            header, footer {
+                padding: 0.5em;
+            }
+            .responsive-image {
+                border-width: 1px;
+            }
+            main {
+                padding: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exp3 Responsive Webpage</h1>
+    </header>
+    <main>
+        <img src="logo.jpg" alt="logo" class="responsive-image">
+        <p>This image and layout automatically adjust for desktop and mobile screens.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Exp3 Demo</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layout Types</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    h2 { color: #2c3e50; }
+
+    /* 1. Normal Flow */
+    .normal-flow p { border: 1px solid #ccc; padding: 5px; }
+    .normal-flow span { color: blue; }
+
+    /* 2. Flexbox */
+    .flex-container {
+      display: flex;
+      background: #f0f0f0;
+      padding: 10px;
+      gap: 10px;
+    }
+    .flex-container div {
+      background: lightcoral;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* 3. Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      background: #e0f7fa;
+      padding: 10px;
+    }
+    .grid-container div {
+      background: #4dd0e1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 4. Positioning */
+    .positioning {
+      position: relative;
+      height: 100px;
+      background: #eee;
+      margin-bottom: 20px;
+    }
+    .position-box {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      background: orange;
+      padding: 10px;
+    }
+
+    /* 5. Float */
+    .float-container {
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+    .float-box {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: coral;
+      margin-right: 10px;
+    }
+
+    /* 6. Table Layout */
+    .table-container {
+      display: table;
+      width: 100%;
+    }
+    .table-row {
+      display: table-row;
+    }
+    .table-cell {
+      display: table-cell;
+      border: 1px solid #333;
+      padding: 10px;
+    }
+
+    /* 7. Multi-column Layout */
+    .multi-column {
+      column-count: 3;
+      column-gap: 20px;
+      background: #f9f9f9;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Layout Types Demo</h1>
+
+  <!-- 1. Normal Flow -->
+  <h2>1. Normal Flow</h2>
+  <div class="normal-flow">
+    <p>This is a block-level element.</p>
+    <span>This is an inline element.</span>
+  </div>
+
+  <!-- 2. Flexbox Layout -->
+  <h2>2. Flexbox Layout</h2>
+  <div class="flex-container">
+    <div>Flex 1</div>
+    <div>Flex 2</div>
+    <div>Flex 3</div>
+  </div>
+
+  <!-- 3. Grid Layout -->
+  <h2>3. Grid Layout</h2>
+  <div class="grid-container">
+    <div>Grid 1</div>
+    <div>Grid 2</div>
+    <div>Grid 3</div>
+    <div>Grid 4</div>
+  </div>
+
+  <!-- 4. Positioning -->
+  <h2>4. Positioning</h2>
+  <div class="positioning">
+    <div class="position-box">I’m absolutely positioned</div>
+  </div>
+
+  <!-- 5. Float Layout -->
+  <h2>5. Float Layout</h2>
+  <div class="float-container">
+    <div class="float-box"></div>
+    <p>This text wraps around the floated box. Floats were commonly used before Flexbox and Grid.</p>
+  </div>
+
+  <!-- 6. Table Layout -->
+  <h2>6. Table Layout</h2>
+  <div class="table-container">
+    <div class="table-row">
+      <div class="table-cell">Row 1, Cell 1</div>
+      <div class="table-cell">Row 1, Cell 2</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">Row 2, Cell 1</div>
+      <div class="table-cell">Row 2, Cell 2</div>
+    </div>
+  </div>
+
+  <!-- 7. Multi-column Layout -->
+  <h2>7. Multi-column Layout</h2>
+  <div class="multi-column">
+   THANK YOU FOR VISITING MY PAGE
+  </div>
+
+</body>
+</html>

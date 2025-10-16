@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exp1 Product Slideshow</title>
+<style>
+  /* Reset and base */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Fixed Navigation Bar */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 1em;
+    z-index: 1000;
+    text-align: center;
+  }
+  nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #f90;
+  }
+
+  main {
+    margin-top: 70px; /* To avoid overlap due to fixed nav */
+    padding: 1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slideshow {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #444;
+    border-radius: 8px;
+  }
+
+  .slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: #222;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  @keyframes slidefade {
+    0%, 20% { opacity: 1; }
+    25%, 95% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .slide:nth-child(1) {
+    animation: slidefade 12s infinite;
+    animation-delay: 0s;
+  }
+  .slide:nth-child(2) {
+    animation: slidefade 12s infinite;
+    animation-delay: 4s;
+  }
+  .slide:nth-child(3) {
+    animation: slidefade 12s infinite;
+    animation-delay: 8s;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0.8em;
+      font-size: 14px;
+    }
+    main {
+      padding: 0.5em;
+    }
+    .slideshow {
+      height: 120px;
+    }
+    .slide {
+      font-size: 1.2em;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Featured Products</h1>
+  <div class="slideshow">
+    <div class="slide">Product 1: High Quality Headphones</div>
+    <div class="slide">Product 2: Wireless Bluetooth Speaker</div>
+    <div class="slide">Product 3: Portable Power Bank</div>
+  </div>
+  <p>Explore our featured products that suit your needs perfectly!</p>
+</main>
+
+<footer>
+  <p style="text-align:center; padding: 1em; background:#222; color:#fff;">
+    &copy; 2025 Your Company Name
+  </p>
+</footer>
+
+</body>
+</html>
